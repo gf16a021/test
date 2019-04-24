@@ -1,0 +1,54 @@
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\baselinestretch}{0.7}
+
+\textwidth=52zw
+\columnsep=2zw
+\columnseprule=0.1mm
+\evensidemargin=-15mm
+\oddsidemargin=-10mm
+\topmargin=-20mm
+\textheight=245mm
+\headsep=5mm
+\footskip=6mm
+
+\setlength{\headwidth}{\textwidth}
+
+\def\maketitle{%
+\twocolumn[
+\centering{
+\vspace{-.5zh}
+\Large\bf \TITLE}\\
+\hfill{\STUDENTID}\quad{\AUTHOR}\\
+\vspace{-.5zh}
+\hrulefill
+]
+\let\maketitle=\relax}
+
+
+\lhead{通信工学科}
+\chead{\TYPE}
+\rhead{佐藤研究室}
+
+%% フッタに論文番号を付与
+\cfoot{-- 佐藤研 No. \NUMBER --}
+
+\makeatletter 
+\renewcommand{\section}{% \newcommand から \renewcommand に変更すること
+  \@startsection{section}% 区切りコマンドの名前（section, subsection等）
+    {1}% 深さ(sectionが1, subsectionは2等）
+    {\z@}% 左のインデント量
+    {.2\Cvs \@plus.5\Cdp \@minus.2\Cdp}% 前アキ 見出し上のスペース
+    {.1\Cvs \@plus.3\Cdp}% 後アキ 見出し下のスペース 負にすると見出し後のスペース
+    {\normalfont\large\headfont\raggedright}% 見出しのフォント
+}
+\renewcommand{\subsection}{% \newcommand から \renewcommand に変更すること
+  \@startsection{subsection}% 区切りコマンドの名前（section, subsection等）
+    {1}% 深さ(sectionが1, subsectionは2等）
+    {\z@}% 左のインデント量
+    {.2\Cvs \@plus.5\Cdp \@minus.2\Cdp}% 前アキ 見出し上のスペース
+    {.1\Cvs \@plus.3\Cdp}% 後アキ 見出し下のスペース 負にすると見出し後のスペース
+    {\normalfont\large\headfont\raggedright}% 見出しのフォント
+}
+\makeatother

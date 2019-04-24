@@ -1,0 +1,21 @@
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\textwidth=47zw
+\evensidemargin=-5mm
+\oddsidemargin=-5mm
+\topmargin=-20mm
+\textheight=235mm
+
+\setlength{\headwidth}{\textwidth}
+
+\def\maketitle{%
+  \vspace{-.5zh}
+  \begin{center}
+  \LARGE \TITLE\\
+  \Large \STUDENTID \quad \AUTHOR\\
+  \DATE
+  \end{center}
+\let\maketitle=\relax}
+
+\chead{\AUTHOR}

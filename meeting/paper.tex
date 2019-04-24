@@ -1,0 +1,49 @@
+\documentclass[a4paper,11pt]{jsarticle}
+
+%% ANEL meeting スタイルファイル
+\usepackage{anel_meeting}
+
+%% その他のパッケージやスタイルは以下に記述すること
+\usepackage[dvipdfmx]{graphicx} % includegraphics
+
+%% 特に何もなければ変更しない
+\def\TITLE{ミーティング資料}
+
+%% 自分の氏名を入力する
+\def\STUDENTID{GF**A***}
+\def\AUTHOR{ネット 太郎}
+
+%% 打ち合わせの日付を入れる
+\def\DATE{\today}
+
+\begin{document}
+
+%% タイトルヘッダの出力
+\maketitle
+
+%% 以下に資料本体を記述すること
+
+\input{introduction}
+ \section{関連研究}
+
+  これはサンプルです。このサンプルにしたがって，卒論予稿集を作成してくださ
+  い~\cite{sato19hoge-TPT}。
+	
+ \subsection{SDN}
+ 
+ これはサンプルです。このサンプルにしたがって，卒論予稿集を作成してください。こ
+ れはサンプルです。このサンプルにしたがって，卒論予稿集を作成してください。
+
+ %% 図挿入のサンプル
+	\begin{figure}[htb]
+	 \centering
+	 \includegraphics[width=\columnwidth]{figure1.png}
+	 \caption{研究者の図}
+	 \label{fig:investigator}
+	\end{figure}
+
+	%% 参考文献（bibtex）
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,bibfile}
+
+\end{document}

@@ -1,0 +1,63 @@
+\usepackage{array}
+
+% 表紙
+\def\maketitle{%
+\begin{titlepage}
+\vspace*{2zh}
+
+\begin{center}
+  \Huge \textbf{卒~~~~~業~~~~~論~~~~~文}
+\end{center}
+
+\vspace{3zh}
+
+\begin{flushleft}
+{\large  論~~~文~~~名}
+\vspace{1zh}
+\end{flushleft}
+\begin{center}
+  {\LARGE \TITLE}\\
+  \vspace{-1em}
+  \underline{\hspace{0.99\textwidth}}
+\end{center}
+
+\vspace{16zh}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+  \begin{flushright}
+  \begin{tabular}{m{30mm}m{55mm}}
+    指~導~教~員~名 & \multicolumn{1}{c}{\large{佐藤 寧洋}} \\ \cline{2-2}
+    提~出~年~月~日 & \large{\YEAR 年 \MONTH 月 \DAY 日}\\
+    提~出~者 & \\
+    \hspace{1em}所~属 & \large{情報通信工学部　通信工学科} \\
+    \hspace{1em}学~生~番~号 & \large{\STUDENTID} \\
+    \hspace{1em}氏~名 & \multicolumn{1}{c}{\Large{\AUTHOR}} \\ \cline{2-2}
+  \end{tabular}
+\end{flushright}
+\end{table}
+\renewcommand{\arraystretch}{1.0}
+    
+\vspace{5zh}
+
+\begin{center}
+  \LARGE \bf 大~~阪~~電~~気~~通~~信~~大~~学
+\end{center}
+\end{titlepage}
+\thispagestyle{empty}
+\newpage
+\let\maketitle=\relax}
+
+%% 要旨
+\makeatletter
+\renewenvironment{abstract}{%
+  \titlepage
+  \null\vfil
+  \@beginparpenalty\@lowpenalty
+  \begin{center}%
+    {\bfseries\abstractname}%
+    \@endparpenalty\@M
+   \end{center}}%
+  {\par\vfil\null\endtitlepage}
+  \newcommand{\abstractname}{\large{要旨}}
+\makeatother

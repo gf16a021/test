@@ -1,0 +1,54 @@
+\documentclass[a4paper,11pt,oneside,openany,report]{jsbook}
+
+%% ANEL 論文用スタイルファイル
+\usepackage{anel_thesis}
+
+%% その他のパッケージやスタイルは以下に記述すること
+\usepackage[dvipdfmx]{graphicx} % includegraphics
+
+\begin{document}
+
+%% 自分の論文のタイトルを入力する
+\def\TITLE{論文のタイトル}
+
+%% 自分の学生番号と氏名を入力する
+\def\STUDENTID{GF**A***}
+\def\AUTHOR{ネット 太郎}
+
+%% 論文提出の年月日を入力する
+\def\YEAR{2020}
+\def\MONTH{2}
+\def\DAY{14} 
+
+%% 表紙の作成
+\maketitle
+
+%% 論文の要旨を記述する
+%% 同じフォルダの abstract.tex を編集する
+\input{abstract}
+
+ %% 目次の挿入
+ \pagenumbering{roman} 
+ \tableofcontents
+ \cleardoublepage
+ \setcounter{page}{1}
+ \pagenumbering{arabic}
+
+ %% これ以降，論文本体
+
+ \input{introduction}
+
+  %% 図挿入のサンプル
+	\begin{figure}[htb]
+	 \centering
+	 \includegraphics[width=\columnwidth]{figure1.png}
+	 \caption{研究者の図}
+	 \label{fig:investigator}
+	\end{figure}
+
+	\input{acknowledgment}
+	
+	%% 参考文献（bibtex）
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,bibfile}
+\end{document}

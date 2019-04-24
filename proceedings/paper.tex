@@ -1,0 +1,59 @@
+\documentclass[a4paper,11pt,twocolumn]{jsarticle}
+
+%% ANEL Proceedings スタイルファイル
+\usepackage{anel_proc}
+
+%% その他のパッケージやスタイルは以下に記述すること
+\usepackage[dvipdfmx]{graphicx} % includegraphics
+
+%% 卒論の年度（西暦）を入力する
+\def\YEAR{2019}
+
+%% 作成する資料のタイプをコメントアウトする
+%\def\TYPE{\YEAR 年度卒業論文予稿集}
+\def\TYPE{\YEAR 年度卒論中間報告会}
+
+%% 自分の論文のタイトルを入力する
+\def\TITLE{論文のタイトル}
+
+%% 自分の学生番号と氏名を入力する
+\def\STUDENTID{GF**A***}
+\def\AUTHOR{ネット 太郎}
+
+%% 自分の論文の発表番号を入力する
+\def\NUMBER{1}
+
+\begin{document}
+
+%% タイトルヘッダの出力
+\maketitle
+
+%% 以下に予稿本体を記述すること
+%% subsection までで構成すること（subsubsection は使用しないこと）
+
+ \section{はじめに}
+ 
+ これはサンプルです。このサンプルにしたがって，卒論予稿集などを作成してください。
+ 
+ \section{関連研究}
+
+  これはサンプルです。このサンプルにしたがって，卒論予稿集などを作成してくださ
+  い~\cite{sato19hoge-TPT}。
+	
+ \subsection{SDN}
+ 
+ これはサンプルです。このサンプルにしたがって，卒論予稿集などを作成してください。
+ 
+ %% 図挿入のサンプル
+	\begin{figure}[htb]
+	 \centering
+	 \includegraphics[width=\columnwidth]{figure1.png}
+	 \caption{研究者の図}
+	 \label{fig:investigator}
+	\end{figure}
+
+	%% 参考文献（bibtex）
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,bibfile}
+
+\end{document}
